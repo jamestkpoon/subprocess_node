@@ -25,7 +25,7 @@ ros2 run subprocess_node subprocess_node.py --ros-args -p cmd:="CMD_AND_ARGS"
 Parameters:
 - ```raw``` (default: false): if true, CMD_AND_ARGS is run as-is. Otherwise, the command that is run is
   ```
-  bash -c "{sudo }/your/ros2/workspace/src/subprocess_node/scripts/CMD_AND_ARGS/CMD_AND_ARGS"
+  bash -c "{sudo }/your/ros2/workspace/src/subprocess_node/scripts/CMD_AND_ARGS"
   ```
 - ```sudo``` (default: false): if true, sets {sudo } above
 
