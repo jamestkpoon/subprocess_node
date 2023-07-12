@@ -11,11 +11,13 @@ colcon build --symlink-install --packages-select subprocess_node
 ### Enabling a script to be run as root without a password
 1. ```sudo chown root:root /path/to/script```
 1. ```sudo visudo``` (safer than ```echo >>```)
-1. Append the following lines. Note for this repo: path/to/script should be in /this/checkout/root/scripts/
+1. Append the following lines:
    ```
    <username> ALL = (ALL) ALL
    <username> ALL = (root) NOPASSWD: /path/to/script
    ```
+   - \<username\>: result of ```echo $USER```
+   - /path/to/script: a file in /this/checkout/root/scripts/
 1. Save and apply
 1. ```sudo /path/to/script ARGS```
 
